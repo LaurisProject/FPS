@@ -23,8 +23,9 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private Player[] photonPlayers;
     public int playersInRoom;
     public int myNumberInRoom;
-
     public int playersInGame;
+
+    public Vector3 spawnPosition;
 
     // Delayed start
     private bool readyToCount;
@@ -245,7 +246,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         //creates player network controller but not player character
         // Instantiate player prefab across the network
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), spawnPosition, Quaternion.identity, 0);
     }
 
 }
