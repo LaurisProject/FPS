@@ -661,6 +661,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -674,10 +675,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 5e2cb7eb-229d-42da-b3db-87656ce76ae5
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: FPS(projectGame) (1)
+  organizationId: lemikistu
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
