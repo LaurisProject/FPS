@@ -50,10 +50,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom("Room" + randomRoomName, roomOps);
     }
 
-    public override void OnJoinedRoom()
-    {
-        Debug.Log("We are now in a room");
-    }
+  
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
