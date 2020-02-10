@@ -16,15 +16,16 @@ public class PlayerInfo : MonoBehaviour
         }
         else
         {
-            if (PlayerInfo.PI != this)
+            if(PlayerInfo.PI != this)
             {
                 Destroy(PlayerInfo.PI.gameObject);
                 PlayerInfo.PI = this;
             }
         }
+        DontDestroyOnLoad(this.gameObject);
     }
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         if (PlayerPrefs.HasKey("MyCharacter"))
         {
