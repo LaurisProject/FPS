@@ -2,9 +2,10 @@
 
 public class SimpleFreeLookCamera : MonoBehaviour
 {
-
-    public float movementSpeed;
-    public float cameraSensitivity;
+    [SerializeField]
+    private float movementSpeed     = 50.0f,
+                  fastMovementSpeed = 200.0f,
+                  cameraSensitivity = 3.0f;
 
     void Start()
     {
@@ -16,6 +17,9 @@ public class SimpleFreeLookCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool fastCam = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        float movementSpeed = fastCam ? this.fastMovementSpeed : this.movementSpeed;
+
         if (Input.GetKey(KeyCode.A))
         {
             transform.position = transform.position + (-transform.right * movementSpeed * Time.deltaTime);
@@ -35,6 +39,7 @@ public class SimpleFreeLookCamera : MonoBehaviour
         {
             transform.position = transform.position + (-transform.forward * movementSpeed * Time.deltaTime);
         }
+
 
         float newRotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * cameraSensitivity;
         float newRotationY = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * cameraSensitivity;

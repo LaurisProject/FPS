@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 771581222}
   - component: {fileID: 771581221}
   - component: {fileID: 771581220}
+  - component: {fileID: 771581223}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -198,12 +199,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771581219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.05165, y: 60.909058, z: 39.147697}
+  m_LocalPosition: {x: 100, y: 24, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771581223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771581219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a86af4b70936f40ae0ef20356f744f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 16
+  fastMovementSpeed: 200
+  cameraSensitivity: 3
 --- !u!1 &1863915879
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,11 +379,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
-    - target: {fileID: 5094951004402938031, guid: 5a082bb02f8fe9946ad65f74736913f4,
-        type: 3}
-      propertyPath: m_TerrainData
-      value: 
-      objectReference: {fileID: 15600000, guid: 68341d189870c82438df4aa82555e5bd,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a082bb02f8fe9946ad65f74736913f4, type: 3}
