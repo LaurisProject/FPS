@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5605234886002269305}
   - component: {fileID: 779781526679035702}
   - component: {fileID: 7730830790016655384}
+  - component: {fileID: 3038794174991611568}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4464354438043669691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.702675, y: 39.631294, z: 102.37644}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1704192635281413375}
@@ -104,6 +105,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 50
   rotationSpeed: 150
+--- !u!114 &3038794174991611568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464354438043669691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90a61795f8d83347a5317e26cd90f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterValue: 0
+  myCharacter: {fileID: 0}
 --- !u!1001 &1704891665226895827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 1067053214699150, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_Name
       value: Character_Elf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067053214699150, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.x
