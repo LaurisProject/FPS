@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5605234886002269305}
   - component: {fileID: 779781526679035702}
   - component: {fileID: 7730830790016655384}
-  - component: {fileID: 3038794174991611568}
+  - component: {fileID: 1469026139559721888}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 50
   rotationSpeed: 150
---- !u!114 &3038794174991611568
+--- !u!114 &1469026139559721888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4464354438043669691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90a61795f8d83347a5317e26cd90f99, type: 3}
+  m_Script: {fileID: 11500000, guid: 13b610acda6677a429182550da6a4125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterValue: 0
