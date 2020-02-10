@@ -54,7 +54,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Tried to join a random game but failed. There must be no open games available");
 
-        // Sometimes joining room failes because there is no room. So we create new one.
+        // Sometimes joining room fails because there is no room. So we create new one.
         CreateRoom();
     }
 
