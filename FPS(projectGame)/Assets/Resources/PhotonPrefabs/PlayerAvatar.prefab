@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5605234886002269305}
   - component: {fileID: 779781526679035702}
   - component: {fileID: 7730830790016655384}
+  - component: {fileID: -1221270787226347805}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -104,6 +105,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 50
   rotationSpeed: 150
+--- !u!114 &-1221270787226347805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464354438043669691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b610acda6677a429182550da6a4125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterValue: 1
+  myCharacter: {fileID: 0}
 --- !u!1001 &1704891665226895827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,6 +173,11 @@ PrefabInstance:
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137472929421929078, guid: ffa08167d28cfd24dba0151a4c80f384,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
