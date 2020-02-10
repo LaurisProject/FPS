@@ -56,7 +56,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     // OnEnable and OnDisable created because since we inheriting from other classes we need to override those
 
-    public void OnEnable()
+    public override void OnEnable()
     {
         // Subscribe to functions
         base.OnEnable();
@@ -65,7 +65,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     }
 
-    public void OnDisable()
+    public override void OnDisable()
     {
         base.OnDisable();
         PhotonNetwork.RemoveCallbackTarget(this);

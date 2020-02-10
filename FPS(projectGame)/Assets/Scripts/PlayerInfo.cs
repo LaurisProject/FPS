@@ -10,7 +10,7 @@ public class PlayerInfo : MonoBehaviour
 
     private void OnEnable()
     {
-        if(PlayerInfo.PI == null)
+        if (PlayerInfo.PI == null)
         {
             PlayerInfo.PI = this;
         }
@@ -38,5 +38,4 @@ public class PlayerInfo : MonoBehaviour
         }
     }
 
-   
 }
