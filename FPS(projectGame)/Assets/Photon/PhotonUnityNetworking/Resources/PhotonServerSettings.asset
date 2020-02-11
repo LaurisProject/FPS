@@ -34,8 +34,11 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - RPC_AddCharacter
   - RPC_CreatePlayer
   - RPC_LoadedGameScene
-  - RPC_AddCharacter
+  - RPC_Shooting
+  - RPC_GetTeam
+  - RPC_SentTeam
   DisableAutoOpenWizard: 1
   ShowSettings: 1

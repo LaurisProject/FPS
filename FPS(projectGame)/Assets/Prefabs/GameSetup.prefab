@@ -43,6 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252ffce6974b34b49aff7c9e693452d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  healthDisplay: {fileID: 0}
+  nextPlayersTeam: 1
+  spawnPointsTeamOne:
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnPointsTeamTwo:
   - {fileID: 0}
   - {fileID: 0}
