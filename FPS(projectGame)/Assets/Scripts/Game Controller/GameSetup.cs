@@ -10,7 +10,11 @@ public class GameSetup : MonoBehaviour
 {
     public static GameSetup GS;
     public Text healthDisplay;
-    public Transform[] spawnPoints;
+    //Value of the team in which the next player will spawn to.
+    public int nextPlayersTeam;
+    //Seperate team spawn points
+    public Transform[] spawnPointsTeamOne;
+    public Transform[] spawnPointsTeamTwo;
 
     private void OnEnable()
     {
@@ -36,5 +40,18 @@ public class GameSetup : MonoBehaviour
 
         // Load the main menu scene
         SceneManager.LoadScene(MultiPlayerSettings.multiplayerSetting.menuScene);
+    }
+    
+    //This method will alternate between the teams.
+    public void UpdateTeam()
+    {
+        if(nextPlayersTeam == 1)
+        {
+            nextPlayersTeam = 2;
+        }
+        else
+        {
+            nextPlayersTeam = 1;
+        }
     }
 }
