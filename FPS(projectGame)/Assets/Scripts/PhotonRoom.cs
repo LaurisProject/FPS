@@ -244,9 +244,18 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        //creates player network controller but not player character
+        // Creates player network controller but not player character
         // Instantiate player prefab across the network
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), spawnPosition, Quaternion.identity, 0);
+    }
+
+    // This method is called when a player leaves the room. Host migration is handled by Photon plugin itself.
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+        // When a player leaves the room, we can get access to that player and use its information for various other operations.
+        Debug.Log(otherPlayer.NickName + " has left the game");
+        playersInRoom--;
     }
 
 }
