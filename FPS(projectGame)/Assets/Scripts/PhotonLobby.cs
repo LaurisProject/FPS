@@ -45,7 +45,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public void OnBattleButtonClick()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);// i added this to move the player into the next scene this not the correct way, the correct way is to go through the DelayStartRoomController.
         Debug.Log("Battle Button was clicked");
         battleButton.SetActive(false);
         cancelButton.SetActive(true);
