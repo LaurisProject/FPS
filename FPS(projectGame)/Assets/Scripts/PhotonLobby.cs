@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PhotonLobby : MonoBehaviourPunCallbacks
 {
@@ -14,6 +15,8 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     // To Cancel the match search.
     public GameObject cancelButton;
+
+    public int maxPlayers;
 
     // This function initialize the singleton
     private void Awake()
@@ -42,10 +45,11 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public void OnBattleButtonClick()
     {
+        SceneManager.LoadScene(1);
         Debug.Log("Battle Button was clicked");
         battleButton.SetActive(false);
         cancelButton.SetActive(true);
-
+        
         // Special function that looks at all available rooms and pick it at random.
         PhotonNetwork.JoinRandomRoom();
     }
@@ -61,10 +65,11 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     void CreateRoom()
     {
         Debug.Log("Trying to create a new room");
-        int randomRoomName = Random.Range(0, 1000);
+        int randomRoomName = Random.Range(0, 1000);// creating a random name for the room
         RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = (byte) MultiPlayerSettings.multiplayerSetting.maxPlayers };
         // Passing variables as failsafe to stop creating duplicate rooms
         PhotonNetwork.CreateRoom("Room" + randomRoomName, roomOps);
+        Debug.Log(randomRoomName);
     }
 
   
@@ -82,10 +87,5 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         cancelButton.SetActive(false);
         battleButton.SetActive(true);
         PhotonNetwork.LeaveRoom();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

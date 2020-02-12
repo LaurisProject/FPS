@@ -40,5 +40,6 @@ MonoBehaviour:
   - RPC_LoadedGameScene
   - RPC_SentTeam
   - RPC_Shooting
+  - RPC_SendTimer
   DisableAutoOpenWizard: 1
   ShowSettings: 1

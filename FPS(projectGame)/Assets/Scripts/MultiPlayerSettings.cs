@@ -14,6 +14,8 @@ public class MultiPlayerSettings : MonoBehaviour
     public int maxPlayers;
 
     public int menuScene;
+    //holds the build order of the scenes
+    public int multiPlayerScene; 
 
     // To call scenes from our scripts
     public int multiplayerScene;

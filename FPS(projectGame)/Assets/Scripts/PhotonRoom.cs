@@ -127,6 +127,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
         // Rename player in photon server
         PhotonNetwork.NickName = myNumberInRoom.ToString();
+        //this is for using delay start 
         if (MultiPlayerSettings.multiplayerSetting.delayStart)
         {
             // Display list of players in room within max number of players room can hold. To be edited later.
@@ -146,10 +147,11 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
                 PhotonNetwork.CurrentRoom.IsOpen = false;
             }
         }
-        else
-        {
-            StartGame();
-        }
+        //else
+       // {
+            //this is called if we are not using the delay start function.
+       //     StartGame();
+       // }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -220,10 +222,10 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
                 PV.RPC("RPC_LoadedGameScene", RpcTarget.MasterClient);
             }
             //for non delayed start game
-            else
-            {
-                RPC_CreatePlayer();
-            }
+           // else
+          //  {
+               // RPC_CreatePlayer();
+           // }
         }
 
     }
